@@ -1,0 +1,22 @@
+[
+  {"query": "ถ้าจะเปลี่ยน auth ของระบบมาใช้ Clerk โดยไม่ทำ architecture พัง ต้องทำไงครับ", "should_trigger": true},
+  {"query": "How should we integrate the installed TanStack Router version with the existing API gateway? Explain best practices only.", "should_trigger": true},
+  {"query": "ช่วยวิเคราะห์ว่า repo นี้ควรเก็บ Zod schema ที่ไหนและทำไม", "should_trigger": true},
+  {"query": "อยากย้ายฐานข้อมูลโดยไม่ทำให้ contract ฝั่ง client พัง มีแผนแนะนำไหม", "should_trigger": true},
+  {"query": "What is the safest approach to improve this repo's server-side caching?", "should_trigger": true},
+  {"query": "ช่วยออกแบบแนวทาง migration โดยอิง codebase และ docs ปัจจุบัน ไม่ต้องลงมือทำ", "should_trigger": true},
+  {"query": "ถ้าต้องการให้ x ได้ผลลัพธ์ y ในระบบนี้ควรวางขั้นตอนยังไง", "should_trigger": true},
+  {"query": "Explain best practices for shared authentication contracts in our monorepo and show full source files in the answer", "should_trigger": true},
+  {"query": "ช่วยตรวจว่าควรวาง performance refactor plan อย่างไรตาม dependency flow ของ repo", "should_trigger": true},
+  {"query": "We use an old version of a library; what integration pattern is supported for the installed version?", "should_trigger": true},
+  {"query": "แก้โค้ด Clerk ทุกไฟล์แล้ว commit ให้เลย", "should_trigger": false},
+  {"query": "implement authentication in the repo now", "should_trigger": false},
+  {"query": "Run the full unit test suite and fix failures", "should_trigger": false},
+  {"query": "เขียน unit tests เพิ่มให้ module auth เลย", "should_trigger": false},
+  {"query": "Please deploy the app to production", "should_trigger": false},
+  {"query": "เปลี่ยน package versions ให้หมดและ update lockfile", "should_trigger": false},
+  {"query": "refactor this service right now and submit a PR", "should_trigger": false},
+  {"query": "ช่วย format source code ทั้ง repo", "should_trigger": false},
+  {"query": "Write a standalone hello world script unrelated to any repo", "should_trigger": false},
+  {"query": "แปล README นี้เป็นภาษาไทย", "should_trigger": false}
+]

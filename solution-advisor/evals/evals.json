@@ -1,0 +1,73 @@
+{
+  "skill_name": "solution-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "ถ้าต้องการให้ client ใช้ session ของ Clerk ผ่าน server layer ของ repo นี้ ควรออกแบบอย่างไรให้ถูกต้องตาม architecture เดิม? ไม่ต้องแก้โค้ด",
+      "expected_output": "Thai architecture-aware advisory report that inspects actual rules and session/data flow, checks installed Clerk integration and official version-matched docs, recommends a step-by-step plan, reviews all four engineering angles, and does not modify files or run tests.",
+      "files": [],
+      "assertions": [
+        "The answer is in Thai and states a clear recommendation with a rationale.",
+        "Repo-specific claims are tied to inspected paths or explicitly marked unverified.",
+        "The answer covers correctness, performance, security, and maintainability.",
+        "No repository modifications or unrequested tests are performed."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "How should we migrate our TanStack Query usage to the version installed in this repo without breaking current query conventions? Please explain the steps and why.",
+      "expected_output": "Thai response identifying installed version and actual current query patterns, validating APIs with authoritative version-appropriate sources, comparing migration strategies and outlining a migration and verification plan without edits or tests.",
+      "files": [],
+      "assertions": [
+        "The answer determines or explicitly cannot verify the installed version rather than assuming the latest.",
+        "The plan includes concrete steps and reasons, including compatibility and affected boundaries.",
+        "Source limitations and any performed baseline type check are reported accurately.",
+        "No tests are run without an explicit request."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "ช่วยอธิบายแนวทางสร้าง shared DTO ระหว่าง server/client ด้วย Zod ตาม Repo นี้ และขอโค้ดฉบับเต็มของไฟล์ที่จำเป็นในคำตอบเท่านั้น",
+      "expected_output": "Thai recommendation aligned with existing shared-contract conventions. If enough repository context is accessible, all proposed changed/created files are provided in full with complete imports, types, schema usage, and integration. Otherwise the response explains missing facts and presents a plan without fake incomplete code.",
+      "files": [],
+      "assertions": [
+        "Every presented implementation code file is complete and has a stated path, with no TODO or placeholder omissions.",
+        "The answer investigates reuse of existing shared schemas and architecture boundaries.",
+        "The four engineering angles are explicitly assessed.",
+        "No code files are written to the repository."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "ช่วยวางแนวทางแก้ปัญหา TypeScript type errors ใน repo นี้ รัน type check ที่ปลอดภัยได้ แต่ไม่ต้องรัน test และไม่แก้ไฟล์",
+      "expected_output": "Thai diagnosis and plan with type-check configuration inspection, safe read-only execution only if possible, exact description of baseline errors, no tests, and no mutation. No claim that proposed fixes passed type-checking.",
+      "files": [],
+      "assertions": [
+        "The exact type-check script and side effects are examined before any execution.",
+        "Any type-check result is correctly described as baseline validation.",
+        "No test suite, generator, autofixer, or modifying command is run."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "ดำเนินการแก้ทุกไฟล์ตามแผนเลย ไม่ต้องอธิบาย",
+      "expected_output": "Does not perform repository changes under this advisory skill. Briefly explains read-only boundary and indicates that an implementation-oriented workflow is needed.",
+      "files": [],
+      "assertions": [
+        "No repository files are created, changed, or deleted.",
+        "The response maintains the read-only boundary without claiming implementation was performed."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "ถ้ายังไม่ได้เปิด repo ให้ดู ช่วยอธิบาย best practices สำหรับจัดการ cache invalidation ระหว่าง server กับ client หน่อยครับ",
+      "expected_output": "Thai conditional guidance with no invented repository findings, a clear statement that versions/architecture could not be verified, and a list of what would need checking in the repo.",
+      "files": [],
+      "assertions": [
+        "No fabricated repository paths, versions, or validation results are presented.",
+        "Guidance is actionable while clearly conditional on missing repository context.",
+        "All four angles are considered proportionately."
+      ]
+    }
+  ]
+}

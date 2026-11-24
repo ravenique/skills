@@ -10,6 +10,7 @@ Reusable Agent Skills for AI coding agents. Each skill provides a focused workfl
 | [`repo-performance-refactor`](./repo-performance-refactor/) | Audits runtime, memory, database, network/assets, and maintainability concerns; ranks evidence-backed bottlenecks; then guides a focused, behavior-preserving refactor with measurement and verification. | Investigating slow or resource-intensive code, profiling hot paths, optimizing queries/assets, or planning a performance-focused refactor. |
 | [`bug-fixer`](./bug-fixer/) | Traces defects from symptoms through the causal chain to the root cause, separates verified facts from assumptions, and prepares a regression-safe fix plan for approval before editing. Includes correctness, performance, security, and compatibility checks. | Debugging crashes, errors, failing tests, timeouts, incorrect results, data inconsistencies, or production defects. |
 | [`ux-architect`](./ux-architect/) | Connects cognitive UX principles with practical interface rules and repository-native implementation. Includes 30 Laws of UX and 100 RFC 2119 rules across eight UI/UX domains, with workflows for ideation, audits, and implementation. | Designing user flows or interfaces, reviewing screens/components, improving forms and interactions, or implementing accessible UI. |
+| [`solution-advisor`](./solution-advisor/) | Investigates repository rules, architecture, conventions, dependencies, and version-appropriate documentation before recommending solutions. Compares viable alternatives, checks correctness, performance, security, and maintainability, and delivers a reasoned, step-by-step plan in Thai without modifying repository files. | Asking how to solve a technical problem, design an integration or architecture, plan a migration, or get read-only engineering advice in Thai. |
 
 ## Choose the Right Skill
 
@@ -19,6 +20,7 @@ Reusable Agent Skills for AI coding agents. Each skill provides a focused workfl
 | Diagnose and fix an existing defect | `bug-fixer` |
 | Investigate or improve performance | `repo-performance-refactor` |
 | Design, critique, or implement UI/UX | `ux-architect` |
+| Get read-only technical advice, architecture guidance, or a step-by-step plan | `solution-advisor` |
 
 The skills have distinct scopes and may refer work to one another when appropriate. For example, feature development belongs to `mindful-feature-engineer`; a defect discovered during that work can be handed to `bug-fixer`; and a dedicated performance campaign belongs to `repo-performance-refactor`.
 
@@ -26,7 +28,7 @@ The skills have distinct scopes and may refer work to one another when appropria
 
 The Skills CLI installs skills directly from this GitHub repository. Use `bunx` with Bun or `npx` with Node.js.
 
-### Install all four skills for Antigravity
+### Install all five skills for Antigravity
 
 Project installation is the default. Run these commands from your project directory:
 
@@ -35,6 +37,7 @@ bunx skills add ravenique/skills --skill mindful-feature-engineer --agent antigr
 bunx skills add ravenique/skills --skill repo-performance-refactor --agent antigravity
 bunx skills add ravenique/skills --skill bug-fixer --agent antigravity
 bunx skills add ravenique/skills --skill ux-architect --agent antigravity
+bunx skills add ravenique/skills --skill solution-advisor --agent antigravity
 ```
 
 ### Install one skill
@@ -62,6 +65,7 @@ bunx skills add ravenique/skills --skill mindful-feature-engineer --agent antigr
 bunx skills add ravenique/skills --skill repo-performance-refactor --agent antigravity --global
 bunx skills add ravenique/skills --skill bug-fixer --agent antigravity --global
 bunx skills add ravenique/skills --skill ux-architect --agent antigravity --global
+bunx skills add ravenique/skills --skill solution-advisor --agent antigravity --global
 ```
 
 For Antigravity, project skills are installed under `.agents/skills/`; global skills are installed under `~/.gemini/config/skills/`.
@@ -151,6 +155,15 @@ Because this command is marked experimental by the CLI, verify its current help 
 - Repository context discovery: inspect actual design tokens, UI primitives, styling stack/version, viewport needs, and locale/script requirements before writing UI code.
 - Progressive disclosure: use the master rule index to consult only the rules and UX laws relevant to the current task.
 
+### Solution Advisor
+
+- Strictly read-only technical advisory: never modifies repository files, dependencies, or environment state.
+- Repository-first investigation of project rules, architecture, shared contracts, manifests, and installed skills.
+- Version-appropriate verification against primary documentation, API references, and migration guides.
+- Causal reasoning and comparison of viable alternatives with clear rationale, trade-offs, and a step-by-step plan.
+- Engineering review across four angles—correctness, performance, security, and maintainability—plus complete, contextually usable code when code is provided.
+- Clear, professional Thai delivery while preserving original file paths, identifiers, and technical terms.
+
 ## Repository Structure
 
 Each skill is self-contained. Its `SKILL.md` contains the required metadata and primary instructions. Supporting catalogs and references stay inside that skill's directory so relative links continue to work after installation.
@@ -166,6 +179,10 @@ Each skill is self-contained. Its `SKILL.md` contains the required metadata and 
 ├── repo-performance-refactor/
 │   ├── SKILL.md
 │   ├── refactoring-catalog.md
+│   └── references/
+├── solution-advisor/
+│   ├── SKILL.md
+│   ├── evals/
 │   └── references/
 ├── ux-architect/
 │   ├── SKILL.md
